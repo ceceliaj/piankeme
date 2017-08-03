@@ -3,7 +3,6 @@
     margin:0 auto; padding:0px;
     text-align:center;
     text-decoration:none;
-
 }
 
 
@@ -48,7 +47,7 @@ font-family:"宋体";
 width:130px;
 height:35px;
 float:right;
-margin-top:-60px;
+margin-top:-55px;
 -moz-border-radius: 320px / 200px;
 -webkit-border-radius: 320px / 200px;
 border-radius: 320px /200px;
@@ -130,11 +129,12 @@ font-size:15px;
 }
 
 #wrap{
+
     z-index: 99999;
     position:fixed;
-   /* background-color:rgba(0,0,0,0.1);*/
+   background-color:ivory;
     width: 100%;
-    /*height: 100px;*/
+    height: 80px;
     margin: 0px 0;
     font-weight:bold;
     font-family: "黑体";
@@ -493,30 +493,7 @@ margin-bottom: -48px;
 #nav li{float:left;line-height:60px;text-align:center;list-style:none;}*/
 
 
-.just{
-    font-size: 50px;
-    font-family: "Segoe Script";
-    z-index: 5;
-    height:9900px;
-    width:600px;
-    position: relative;
-    left:35%;
-    color:#02c874;
 
-}
-.just img{
-    width:100%;
-    height:100%;
-
-}
-
-.just1{
-    margin-top:60px;
-width:100%;
-    height:100%;
-border-bottom: 2px solid #000;
-
-}
 #banner {
     margin:0px;
     padding:0px;
@@ -528,6 +505,7 @@ border-bottom: 2px solid #000;
 }
 
 #banner_list img {
+    /*width:100%;*/
     border: 0px;
 }
 
@@ -596,4 +574,65 @@ margin-top: 582px;
 #banner_list a {
    /* z-index: 11111111;*/
     position: absolute;
+}
+
+
+.just{
+    margin-left:3%;
+   /* z-index: 100;*/
+    margin-top:200px;
+    height:30px;
+    width:100%;
+    position: relative;
+
+}
+.justfenlei ul {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    position: relative;
+
+
+}
+
+.justfenlei ul li{
+
+       list-style: none;
+       float: left;
+       position: relative;
+       z-index: 5;
+       /*width: 60px;*/
+       /*text-align: center;*/
+   }
+.justfenlei1 a{
+    font-size:20px;
+    font-family:"黑体";
+    font-weight:bold;
+
+}
+.justfenlei ul{
+
+    margin-left:100px;
+
+}
+/*.just img{
+    width:auto;
+    height:100%;
+}*/
+
+.kind{
+
+}
+.just1{
+    margin-top:60px;
+    height:800px;
+    border-bottom: 2px solid #000;
+
+}
+.bgright{
+
+    background: url("../img/rightpic.png") no-repeat;
+    margin-left:-130px;
+    width:300px;
+    height:100%;
 }
