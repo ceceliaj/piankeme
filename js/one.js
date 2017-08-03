@@ -1,3 +1,5 @@
+
+
 (function($){
     $.extend($.fn, {
         posfixed: function(configSettings){
@@ -150,4 +152,6 @@
     });
 
 
-})(jQuery);
+})
+(jQuery);
+

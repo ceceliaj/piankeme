@@ -8,7 +8,7 @@
     <![endif]-->
 </head>
 
-
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
     <link rel="stylesheet" href="css/one.css">
     <script src="js/jquery.min.js"></script>
 <script src="js/one.js"></script>
@@ -53,10 +53,11 @@
 
 <body>
 
-    <div class="logo">
-        <p>TIME</p>
+
     </div>
     <div id="wrap">
+       <!-- <div class="logo">
+            <p>TIME</p>-->
         <div id = 'content'>
 
             <ul >
@@ -67,6 +68,7 @@
                 <li><a href="###">LIFE</a></li>
                 <li ><a href="###">TING</a></li>
             </ul>
+
         </div>
         <script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
@@ -88,8 +90,44 @@
                     left:"0",
                 },100)
             })
-        </script>
 
+        </script>
+        <script type="text/javascript">
+            var t = n = 0,
+                count;
+            $(document).ready(function() {
+                // 获取图片标签长度
+                count = $("#banner_list a").length;
+                // 不是当前显示的图片隐藏
+                $("#banner_list a:not(:first-child)").hide();
+                // 点击下面的1234按钮，切换图片
+                $("#banner li").click(function() {
+                    var i = $(this).text() - 1;
+                    n = i;
+                    if (i >= count) return;
+                    // 淡入淡出效果
+                    $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+
+                    // 响应点击
+                    $(this).toggleClass("on");
+
+                    // 切换按钮的时候让上一个按钮回归原来的样式
+                    $(this).siblings().removeAttr("class");
+                });
+                t = setInterval("showAuto()", 4000);
+                $("#banner").hover(function() {
+                        clearInterval(t)
+                    },
+                    function() {
+                        t = setInterval("showAuto()", 4000);
+                    });
+            })
+            // 自动轮播
+            function showAuto() {
+                n = n >= (count - 1) ? 0 : ++n;
+                $("#banner li").eq(n).trigger('click');
+            }
+        </script>
         <script type="text/javascript">
             function show(){
                 document.getElementById("overDiv").style.display = "block" ;
@@ -99,11 +137,11 @@
                 document.getElementById("overDiv").style.display = "block" ;
                 document.getElementById("hsDiv").style.display = "none" ;
             }
+            </script>
 
-        </script>
 
 
-    <div class="top1">
+            <div class="top1">
         <a href="javascript:void(0);" onclick="show()"title="登录" target="_blank">注册/登录</a></div>
 
         <div id="hsDiv" style="display:none;">
@@ -130,26 +168,44 @@
             </div></div>
         <div class="top2">
         <a href="#" title="登录" target="_blank"></a>▲</div>
-
-</div>
-
-    <div class="box1"></div>
-
-
-        <div class="header-bg"></div>
-    <div class="header-bg">
-    </div>
-    </header>
-    <<div class="banner">
-        <h2 class="banner-titlte"><img
-                src="img/e3fa8892778fefe81abd7bf369bd19ad.png"alt="#"height="200"width="200"></h2>
+    <div class="banner">
+        <h2 class="banner-titlte"><img src="img/e3fa8892778fefe81abd7bf369bd19ad.png"alt="#"height="200"width="200"></h2>
         <div class="search">
             <form action="#">
                 <input type="text" class="search-text" placeholder="搜索你喜欢的">
-                <a href="#" class="search-btn sprite_icon"></a>
+                <a href="#" class="search-btn sprite_icon">
+                </a>
             </form>
         </div>
+    </div>  </div>
+    </div>
+</div>
+    <div id="banner">
+        <div id="banner_info">
+        </div>
+        <ul>
+            <li class="on">
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>
+                3
+            </li>
+            <li>
+                4
+            </li>
+        </ul>
+        <div id="banner_list">
 
+            <a href="#" target="_blank"></a>
+            <a href="#" target="_blank"><img src="image/room_bg2.jpg"> </a>
+            <a href="#" target="_blank"><img src="img/header_bg.jpg"></a>
+            <a href="#" target="_blank"><img src="image/forest_bg4.jpg"></a>
+        <!--<div class="header-bg"></div>-->
 
+        </div></div>
+<div class="just"></div>
 </body>
 </html>
